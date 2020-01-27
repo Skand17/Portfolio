@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import store from './store'
+import {Provider} from 'react-redux'
 import './App.css';
+
+
+// Home
+import Home from './components/Home'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Hello world</h1>
-        </header>
-      </div>
+      <Provider store={store}>
+          <Home/>
+      </Provider>
     );
   }
 }

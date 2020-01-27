@@ -1,0 +1,1 @@
+export const FULLAPI_ACTION = 'FULLAPI_ACTION'

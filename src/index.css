@@ -12,3 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.banner {
+  background-color: red;
+}
+
+.about {
+  background-color: yellow;
+}
+
+.mywork {
+  background-color: pink;
+}
+
+.getintouch {
+  background-color: gray;
+}
