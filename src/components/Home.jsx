@@ -30,7 +30,6 @@ class HomePage extends PureComponent {
         return (
             <div>
                 <HeaderSection/>
-                <button className="btn request-demo">Request Demo</button>
                     <ReactFullpage
                         scrollOverflow={true}
                         navigation={true}

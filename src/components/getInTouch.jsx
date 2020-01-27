@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 class GetInTouch extends Component {
     render() {
         return (
-            <div>
-                    Touch
+            <React.Fragment>
+            <div className="section-block">
+                <h2>Get In Touch</h2>
             </div>
+        </React.Fragment>
         );
     }
 }
