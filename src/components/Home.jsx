@@ -1,80 +1,61 @@
 import React, { PureComponent } from 'react'
-import ReactFullpage from '@fullpage/react-fullpage';
+import { Tween, Timeline } from 'react-gsap';
 import {connect} from 'react-redux'
+import styled from 'styled-components';
+import { Controller, Scene } from 'react-scrollmagic';
 
-// Layouts
-import HeaderSection from '../layouts/header'
-
-// HomePage Components.
-import Banner from './landing'
-import About from './About'
-import MyWork from './mywork'
-import GetInTouch from './getInTouch'
-
-// FullpageAction
-import {callFullPage} from '../actions/callFullPageAction'
+// Component
+import GetInTouch from "../components/getInTouch"
+import Landing from "../components/landing"
+import About from "../components/About"
+import MyWork from "../components/mywork"
 
 class HomePage extends PureComponent {
-
-    constructor(props){
-        super(props)
-        this.fullpageApi.bind(this)
-    }
-
-    fullpageApi(fullpageApi){
-        this.props.callFullPageProps(fullpageApi)
-    }
-
-
     render() {
         return (
-            <div>
-                <HeaderSection/>
-                    <ReactFullpage
-                        scrollOverflow={true}
-                        navigation={true}
-                        scrollingSpeed = {1000} 
-                        render={({ state, fullpageApi }) => {
-                            
-                        // Dispatchtofullpageevents
-                        this.fullpageApi(fullpageApi)
-
-                        return (
-                            <ReactFullpage.Wrapper>
-                                <div className="section banner">
-                                    <Banner/>
-                                </div>
-                                <div className="section about">
-                                    <About/>
-                                </div>
-                                <div className="section mywork">
-                                    <MyWork/>
-                                </div>
-                                <div className="section getintouch">
-                                    <GetInTouch/>
-                                </div>
-                            </ReactFullpage.Wrapper>
-                    );
-                }}
-                />
+            <div className="controller-block">
+                    <Controller>
+                        <Scene
+                            triggerHook="onLeave"
+                            duration="300%"
+                            pin>
+                            <Timeline
+                            wrapper={<div id="pinContainer" />}
+                            >
+                            <section className="panel blue landing-banner"><Landing/></section>
+                                <Tween
+                                    from={{ x: '-100%' }}
+                                    to={{ x: '0%' }}
+                                >
+                                    <section className="panel turqoise about-banner"><About/></section>
+                                </Tween>
+                                {/* <Tween
+                                    from={{ x: '100%' }}
+                                    to={{ x: '0%' }}
+                                >
+                                    <section className="panel green work-banner"><MyWork/></section>
+                                </Tween> */}
+                                <Tween
+                                    from={{ y: '-100%' }}
+                                    to={{ y: '0%' }}
+                                >   
+                                    <section className="panel bordeaux getintouch-banner"> 
+                                         <GetInTouch/>
+                                    </section>
+                                </Tween>    
+                            </Timeline>
+                        </Scene>
+                        </Controller>
             </div>
         )
     }
 }
 
-const mapStateToProps = (state) => {
+const mapstateToProps = state => {
     return {
-       fullApiMethods : state.data
+        ...state
     }
 }
-
-const mapDispatchToProps = dispatch => {
-    return {
-        callFullPageProps :  (fullpageApi) => dispatch(callFullPage(fullpageApi))
-    }
-}
-
-
 
 // Connecting component with store
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage)
+export default connect(mapstateToProps)(HomePage)
