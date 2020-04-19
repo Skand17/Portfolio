@@ -40,6 +40,7 @@ section.banner-section.clearfix {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 .banner-text p {
     color: rgb(136, 146, 176);
@@ -95,6 +96,7 @@ section.banner-section.clearfix {
 
 .flex-child.image {
     position: relative;
+    order: 2;
 }
 
 
@@ -363,6 +365,70 @@ a.flex-wrapper:nth-child(odd) .project-desc{
 
 /* Responsive CSS */
 
-@media only screen and (max-width: 600px) {
-    
+@media only screen and (max-width: 991px) {
+    .banner-text h1, .banner-text h2{
+        font-size: 53px;
+    }
+    .banner-text p{
+        padding-top: 28px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .banner-text h1, .banner-text h2{
+        font-size: 38px;
+    }
+    .commom-section{
+        padding: 30px 0;
+        margin-bottom: -2px;
+    }
+    .flex-child.content{
+        order: 2;
+        padding: 40px 0 0 0;
+    }
+    .flex-child.image {
+        order: 1;
+    }
+    .flexwrapper{
+        flex-wrap: wrap;
+    }
+    .tabing-wrapper .rwt__tablist button{
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    .block-ui h3 {
+        padding-left: 0;
+    }
+    .block-ui h2{
+        padding-left: 0;
+    }
+    .block-ui ul{
+        padding: 20px 0;
+    }
+    .block-ui{
+        padding-top: 30px;
+    }
+    .flex-wrapper{
+        display: block;
+    }
+    .commom-css{
+        height: 300px;
+        width: 100%;
+    }
+    .rwt__tabs[data-rwt-vertical="true"]{
+        display: block !important;
+    }
+    a.flex-wrapper:nth-child(odd) .project-desc, a.flex-wrapper:nth-child(even) .project-desc{
+        padding: 0 20px  !important;
+    }
+    .rwt__tab[aria-selected="true"]:after{
+        content: none  !important;
+    }
+    .rwt__tablist[aria-orientation="vertical"] {
+        border: 0 !important;
+        white-space: nowrap;
+        margin: 0;
+        display: block !important;
+        overflow: auto;
+    }
 }

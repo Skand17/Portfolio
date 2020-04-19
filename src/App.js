@@ -8,6 +8,10 @@ import store from "./store"
 // Router
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
+
+import Particles from 'react-particles-js';
+import {params} from "./particleobj"
+
 // Header 
 import Header from "./HelperComponents/Header"
 import Worked from "./components/whereiworked"
@@ -28,6 +32,8 @@ const App = () => {
               <Worked/>
               <Projects/>
               <Contact/>
+              {/* <Particles params={params}>
+              </Particles> */}
             </Suspense>
         </Provider>
       </Fragment>

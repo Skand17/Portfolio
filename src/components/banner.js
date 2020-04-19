@@ -19,8 +19,6 @@ const Banner = () => {
                         </p>
                         <button onClick={scrolltobottom} className="btn">Know more</button>
                     </div>
-                <Particles params={params}>
-                </Particles>
             </section>  
         )
 }
