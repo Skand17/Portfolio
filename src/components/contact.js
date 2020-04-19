@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
+import RightSidebar from "../components/rightSidebar"
 
 
 function Contact() {
@@ -129,6 +130,7 @@ function Contact() {
                     </div>  
                 </div>
             </section>
+            <RightSidebar/>
         </React.Fragment>
     )
 }

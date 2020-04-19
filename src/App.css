@@ -10,6 +10,25 @@ img{
     max-width: 100%;
     max-height: 100%;
 }
+
+#animation-canvas {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: all,.6s;
+    -o-transition: all,.6s;
+    transition: all,.6s;
+    opacity: .03;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=3)";
+}
+
+main.main-section {
+    background-color: rgb(10, 25, 47);
+}
+
 /* Header css and navigation css*/
 
 .banner-text span {
@@ -25,7 +44,6 @@ img{
     left: 0;
     max-width: 1048px;
     margin: 0 auto;
-    background-color: rgb(10, 25, 47);
     padding: 20px;
 }
 
@@ -36,11 +54,13 @@ img{
 } */
 
 section.banner-section.clearfix {
-    background-color: rgb(10, 25, 47);
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    position: relative;
+    z-index: 99;
     background-size: cover;
     height: 100vh;
+    margin-bottom: -2px;
 }
 .banner-text p {
     color: rgb(136, 146, 176);
@@ -88,8 +108,9 @@ section.banner-section.clearfix {
 /* About  */
 
 .commom-section {
-    background-color: #0a192f;
     padding: 80px 0;
+    position: relative;
+    z-index: 99   
 }
 
 
@@ -143,7 +164,7 @@ section.about-section-wrapper {
 
 .flex-child.content p {
     max-width: 700px;
-    color: rgb(136, 146, 176);
+    color: #ffffff;
     font-size: 20px;
     line-height: 34px;
 }
@@ -353,7 +374,10 @@ a.flex-wrapper:nth-child(odd) .project-desc{
     line-height: 32px;
 }
 
-
+.form-group .form-control:focus {
+    box-shadow: none;
+    outline: 0;
+}
 
 .commom-css{
     width: 50%;
@@ -361,6 +385,44 @@ a.flex-wrapper:nth-child(odd) .project-desc{
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+nav.contact-me {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 67px;
+    text-align: center;
+    padding-right: 12px;
+    z-index: 99;
+}
+
+nav.contact-me a {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+
+footer.footer-section p {
+    margin: 0;
+    text-align: center;
+    padding: 20px 0;
+    color: #ffffff;
+    letter-spacing: 0.100em;
+    font-size: 21px;
+}
+
+footer.footer-section p .fa {
+    color: red;
+}
+
+footer.footer-section p span {
+    color: #72efd7;
 }
 
 /* Responsive CSS */
@@ -371,6 +433,17 @@ a.flex-wrapper:nth-child(odd) .project-desc{
     }
     .banner-text p{
         padding-top: 28px;
+    }
+    nav.contact-me{
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+    nav.contact-me a {
+        display: inline-block;
+        font-size: 30px;
+        margin-bottom: 12px;
+        padding: 0 18px;
     }
 }
 
@@ -430,5 +503,40 @@ a.flex-wrapper:nth-child(odd) .project-desc{
         margin: 0;
         display: block !important;
         overflow: auto;
+    }
+    .flex-child.image span:before{
+        content: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 475px) {
+    p {
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+    .heading-section.contact p{
+        padding: 10px 0;
+    }
+    .tabing-wrapper{
+        margin-top: 20px;
+    }
+    .heading-section h2{
+        font-size: 24px;
+    }
+    .block-ui ul li{
+        font-size: 16px;
+        line-height: 24px;
+        padding-bottom: 13px;
+    }
+    .tabing-wrapper .rwt__tablist button{
+        font-size: 16px;
+    }
+    .block-ui h2{
+        font-size: 18px;
+    }
+    .project-desc h2{
+        font-size: 24px;
     }
 }

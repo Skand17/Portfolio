@@ -18,13 +18,13 @@ export const projects = [
         title : "Oaks",
         desc : "The Oaks Cellars Pte Ltd was set up in 1996 to keep abreast of the accelerating demand for the epicurean lifestyle. Today Oaks is an icon in the Singapore Wine business, known for her impeccable service, sound retail and distribution strategies in the management of wine shops",
         url : "https://www.oaks.com.sg/",
-        techstack : "HTML5, CSS, Magento, Bootstrap"
+        techstack : "HTML5, CSS3, Magento, Bootstrap"
     },
     {
         class : "janeous",
         title : "Janeous",
         desc : "Speed recruitment platform that combines familiar tools into a better process, connecting you with matched sales talent for live video interviews",
         url : "https://www.janeous.com/",
-        techstack : "HTML5, CSS, Vue JS, Laravel, Mysql"
+        techstack : "HTML5, CSS3, Vue JS, Laravel, Mysql"
     }
 ]

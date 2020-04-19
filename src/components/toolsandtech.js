@@ -7,7 +7,7 @@ function Projects() {
             <section className="commom-section ">
                 <div className="container">
                     <div className="heading-section toolandtech">
-                        <h2>What I've built sop far</h2>
+                        <h2>What I've built so far</h2>
                     </div>
                         <div className="projectslist">
                             {
