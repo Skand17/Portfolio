@@ -1,8 +1,34 @@
 import React from 'react'
 import { Formik } from 'formik';
+import * as Yup from 'yup';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios'
 
 
 function Contact() {
+
+    toast.configure()
+
+    function submitForm(values,setSubmitting, resetForm){
+        setSubmitting(true)
+        axios.post('https://formcarry.com/s/6_NRXcLovqmX', values).then( (res) => {
+            resetForm()
+            const notify = () => toast.success(res.data.message,{
+                position: toast.POSITION.TOP_CENTER
+            });
+            setSubmitting(false)
+            notify()
+        }).catch( (err) =>{
+            const notify = () => toast.success(err,{
+                position: toast.POSITION.TOP_CENTER
+            });
+            notify()
+            setSubmitting(false)
+        })
+    }
+
+
     return (
         <React.Fragment>
             <section className="commom-section contact-form-wrapper">
@@ -13,28 +39,16 @@ function Contact() {
                     </div>
                     <div className="form-wrapper">
                     <Formik
-                        initialValues={{ email: '', name: '', contact : '', message : '' }}
-                        validate={values => {
-                            const errors = {};
-                            if (!values.name) {
-                                errors.name = 'Required';
-                            }
-                            else if(!values.email){
-                                errors.email = 'Required'
-                            } 
-                            else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)){
-                                errors.email = 'Invalid email address';
-                            }
-                            else if(!values.message){
-                                errors.message = 'Required'
-                            }
-                            return errors;
-                        }}
-                        onSubmit={(values, { setSubmitting }) => {
-                            setTimeout(() => {
-                            alert(JSON.stringify(values, null, 2));
-                            setSubmitting(false);
-                            }, 400);
+                        initialValues={{ email: '', name: '', number : '', message : '' }}
+                        validationSchema={
+                            Yup.object({
+                                email: Yup.string().email().required('Required'),
+                                name: Yup.string().required('Required'),
+                                message: Yup.string().required('Required')
+                            })
+                        }
+                        onSubmit={(values, { setSubmitting, resetForm }) => {
+                            submitForm(values, setSubmitting,resetForm)
                         }}
                         >
                         {({
@@ -48,56 +62,66 @@ function Contact() {
                             /* and other goodies */
                         }) => (
                             <form onSubmit={handleSubmit}>
-                            <div className="form-group">
-                                <label>Email</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    className="form-control"
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.email}
-                                />
-                                <span>{errors.email && touched.email && errors.email}</span>
-                            </div>
-                            <div className="form-group">
-                                <label>Name</label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    name="name"
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.name}
-                                />
-                               <span>{errors.name && touched.name && errors.name}</span> 
-                            </div>
-                            <div className="form-group">
-                                <label>Contact No</label>
-                                <input
-                                    type="text"
-                                    name="number"
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    className="form-control"
-                                    value={values.number}
-                                />
-                                {errors.number && touched.number && errors.number}
-                            </div>
-                            <div className="form-group">
-                                <label>Message</label>
-                                <input
-                                    type="text"
-                                    name="message"
-                                    onChange={handleChange}
-                                    className="form-control"
-                                    onBlur={handleBlur}
-                                    value={values.message}
-                                />
-                                {errors.message && touched.message && errors.message}
-                            </div>
-                            <button type="submit" disabled={isSubmitting}>
-                                Submit
+                                <div className="row">
+                                        <div className="col-md-6 col-sm-6 col-xs-12">
+                                            <div className="form-group">
+                                                <label>Name</label>
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="name"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    value={values.name}
+                                                />
+                                            <span className="error">{errors.name && touched.name && errors.name}</span> 
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6 col-sm-6 col-xs-12">
+                                            <div className="form-group">
+                                                <label>Email</label>
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    className="form-control"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    value={values.email}
+                                                />
+                                                <span className="error">{errors.email && touched.email && errors.email}</span>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-12 col-sm-12 col-xs-12">
+                                            <div className="form-group">
+                                                <label>Contact No</label>
+                                                <input
+                                                    type="text"
+                                                    name="number"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    className="form-control"
+                                                    value={values.number}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-12 col-sm-12 col-xs-12">
+                                                                                        
+                                        <div className="form-group">
+                                            <label>Message</label>
+                                            <input
+                                                type="text"
+                                                name="message"
+                                                onChange={handleChange}
+                                                className="form-control"
+                                                onBlur={handleBlur}
+                                                value={values.message}
+                                            />
+                                            <span className="error">{errors.message && touched.message && errors.message}</span>
+                                        </div>
+                                        </div>
+                                </div>
+                            <button className="btn submit-btn" type="submit" disabled={isSubmitting}>
+                                {isSubmitting ? 'Submitting...' : 'Submit'}
                             </button>
                             </form>
                         )}

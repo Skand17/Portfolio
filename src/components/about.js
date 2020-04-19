@@ -16,7 +16,7 @@ const About = () =>  {
                     </div>
                     <div className="flexwrapper">
                         <div className="flex-child content">
-                            <p>Hello! I'm Skand, a Software engineer based in Noida, who enjoys building things that live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.</p>
+                            <p>Hello! I'm Skand, a Software engineer based in India, who enjoys building things that live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.</p>
                             <p>Shortly after graduating from Lucknow University, I joined the engineering team at Singsys Pte Ltd where I work on a wide variety of interesting and meaningful projects on a daily basis.</p>
                         </div>
                         <div className="flex-child image">
@@ -25,35 +25,6 @@ const About = () =>  {
                             </span>
                         </div>
                     </div>
-                    {/* <div className="tootls-technologies">
-                        <ul>
-                            <li>
-                                <span>
-                                    <img src={html}/>
-                                </span>
-                            </li>
-
-                            <li>
-                                <span>
-                                    <img src={css}/>
-                                </span>
-                            </li>
-
-
-                            <li>
-                                <span>
-                                    <img src={graphql}/>
-                                </span>
-                            </li>
-
-                            <li>
-                                <span>
-                                    <img src={react}/>
-                                </span>
-                            </li>
-
-                        </ul>
-                    </div> */}
                 </div>
             </section>
         </React.Fragment>

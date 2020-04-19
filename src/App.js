@@ -14,20 +14,20 @@ import Worked from "./components/whereiworked"
 import About from "./components/about"
 import Banner from "./components/banner"
 import Contact from "./components/contact"
-import SocialSidebar from "./HelperComponents/socialSidebar"
+import Projects from "./components/toolsandtech"
 
 
 const App = () => {
   return (
       <Fragment>
         <Provider store={store}>
-        <Suspense fallback={<div>Loading...</div>}>
-            <Header/>
-            <Banner/>
-            <About/>
-            <Worked/>
-            <Contact/>
-            <SocialSidebar/>
+          <Suspense fallback={<div>Loading...</div>}>
+              <Header/>
+              <Banner/>
+              <About/>
+              <Worked/>
+              <Projects/>
+              <Contact/>
             </Suspense>
         </Provider>
       </Fragment>

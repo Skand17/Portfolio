@@ -88,8 +88,9 @@ section.banner-section.clearfix {
 
 .commom-section {
     background-color: #0a192f;
-    height: 100vh;
+    padding: 80px 0;
 }
+
 
 
 .flex-child.image {
@@ -249,12 +250,119 @@ section.commom-section.contact-form-wrapper {
     color: #ffffff;
 }
 
+.error{
+    color: red;
+}
+
+button.btn.submit-btn {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 11px 68px;
+    margin-top: 20px;
+}
+
+button.btn.submit-btn:hover {
+    background-color: #53b19a;
+}
+
 .form-wrapper {
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
     padding-top: 30px;
 }
 
 .form-group {
     margin-bottom: 20px;
+}
+
+/* Projects css */
+
+.flex-wrapper{
+    display: flex;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.seed{
+    background-image: url('./assets/seed.png');
+}
+
+.obuhi{
+    background-image: url('./assets/obuhi.png');
+}
+
+.oaks{
+    background-image: url('./assets/oaks.png');
+}
+
+.janeous{
+    background-image: url('./assets/janeous.png');
+}
+
+a.flex-wrapper:nth-child(odd) .project-image {
+    order: 1;
+}
+a.flex-wrapper:nth-child(odd) .project-desc {
+    order: 2;
+}
+
+.flex-wrapper:hover {
+    text-decoration: none;
+}
+
+.project-desc h2 {
+    color: #ffffff;
+    letter-spacing: 0.100em;
+}
+
+.project-desc span {
+    color: #52b0a6;
+    font-size: 17px;
+}
+
+a.flex-wrapper:nth-child(even) .project-image {
+    order: 2;
+}
+a.flex-wrapper:nth-child(even) .project-desc {
+    order: 1;
+}
+
+
+a.flex-wrapper:nth-child(even) .project-desc {
+    padding: 0 40px 0 0;
+}
+
+
+a.flex-wrapper:nth-child(odd) .project-desc{
+    padding: 0 0 0 40px;
+}
+
+.project-desc {
+    max-width: 515px;
+}
+
+.project-desc p {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+
+
+.commom-css{
+    width: 50%;
+    background-position: center;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Responsive CSS */
+
+@media only screen and (max-width: 600px) {
+    
 }
