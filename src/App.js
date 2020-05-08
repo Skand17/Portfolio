@@ -1,4 +1,4 @@
-import React,{ Component } from 'react';
+import React,{ Component, useState } from 'react';
 import { Fragment, lazy, Suspense, useEffect } from 'react';
 import './App.css';
 
@@ -27,14 +27,17 @@ import Projects from "./components/toolsandtech"
 
 const App = () => {
 
-
+  const [status, setStatus] = useState(true)
+ 
   useEffect( () => {
-      return <Loader/>
-  }, [])
-
+    setTimeout( () => {
+        setStatus(false)
+    }, 3000)
+  },[])
 
   return (
       <Fragment>
+        { status ? <Loader/> : ""}
         <Provider store={store}>
           <Suspense fallback={<div>Loading...</div>}>
             <main className="main-section">

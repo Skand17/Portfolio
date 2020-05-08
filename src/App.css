@@ -150,6 +150,17 @@ section.about-section-wrapper {
     transition: 0.3s ease;
 }
 
+.loader {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #0a192f;
+    z-index: 999;
+}
+
 .flex-child.image img {
     position: absolute;
     bottom: 0;
@@ -540,3 +551,154 @@ footer.footer-section p span {
         font-size: 24px;
     }
 }
+/* Loading css */
+
+
+/* Try that : */
+
+/* 
+*{
+  border-radius: 100% !important;
+}
+*/
+
+body{
+	background-color:#63a1f4;
+}
+
+.loader1{
+	box-sizing:border-box;
+	width:320px;
+	height:400px;
+	position:absolute;
+}
+
+.loader1{
+    left: 0;
+    top: 50%;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+
+.container-A{
+	position:absolute;
+	width:75%;
+	height:75%;
+	left:12.5%;
+	top:12.5%;
+}
+
+.container-B{
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+}
+
+.spinner1, .spinner2, .spinner3{
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+}
+
+.spinner1{
+	animation : rotation0 4s infinite linear, resize1 4s infinite linear;
+}
+
+
+
+.hex0, .hex120, .hex240{
+	position:absolute;
+	box-sizing:border-box;
+	width:100%;
+	height:57.74%;
+	left:0;
+	top:21.13%;
+	border-left:2px solid #fff;
+	border-right:2px solid #fff;
+}
+
+
+
+.hex0{
+	animation:rotation0 4s infinite linear;
+}
+
+.hex120{
+	transform:rotate(120deg);
+	animation:rotation120 4s infinite linear;
+}
+
+.hex240{
+	transform:rotate(240deg);
+	animation:rotation240 4s infinite linear;
+}
+
+@keyframes rotation0{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+
+@keyframes rotation120{
+	0%{
+		transform:rotate(120deg);
+	}
+	100%{
+		transform:rotate(480deg);
+	}
+}
+
+@keyframes rotation240{
+	0%{
+		transform:rotate(240deg);
+	}
+	100%{
+		transform:rotate(600deg);
+	}
+}
+
+@keyframes resize1{
+	0%,50%,100%{
+		width:100%;
+		height:100%;
+		left:0%;
+		top:0%;
+	}
+	25%,75%{
+		width:120%;
+		height:120%;
+		left:-10%;
+		top:-10%;
+	}
+	12.5%,37.5%,62.5%,87.5%{
+		width:70%;
+		height:70%;
+		left:15%;
+		top:15%;
+	}
+}
+
+@keyframes resize2{
+	0%,33.33%,66.66%,100%{
+		width:100%;
+		height:100%;
+		left:0%;
+		top:0%;
+	}
+	16.66%,49.99%, 83.333%{
+		width:70%;
+		height:70%;
+		left:15%;
+		top:15%;
+	}
+}
+
