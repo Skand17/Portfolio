@@ -20,7 +20,9 @@ import Spirals from "./components/spirals"
 import Header from "./HelperComponents/Header"
 import Worked from "./components/whereiworked"
 import About from "./components/about"
+import Motivational from './components/motivational'
 import Banner from "./components/banner"
+import TechStack from './components/techStack'
 import Contact from "./components/contact"
 import Projects from "./components/toolsandtech"
 
@@ -28,6 +30,8 @@ import Projects from "./components/toolsandtech"
 const App = () => {
 
   const [status, setStatus] = useState(true)
+
+  const [theme,setTheme] = useState(false)
  
   useEffect( () => {
     setTimeout( () => {
@@ -35,8 +39,22 @@ const App = () => {
     }, 3000)
   },[])
 
+  useEffect( () => {
+    if(theme){
+      document.body.classList = 'light'
+    }
+    else
+    {
+      document.body.classList = 'dark'
+    }
+  },[theme])
+
   return (
       <Fragment>
+        <label class="switch">
+          <input type="checkbox" onChange={ () => setTheme(!theme) } />
+          <span class="slider round"></span>
+        </label>
         { status ? <Loader/> : ""}
         <Provider store={store}>
           <Suspense fallback={<div>Loading...</div>}>
@@ -44,8 +62,10 @@ const App = () => {
               <Spirals/>
               <Banner/>
               <About/>
+              <TechStack/>
               <Worked/>
               <Projects/>
+              <Motivational/>
               <Contact/>
             </main>
               {/* <Particles params={params}>

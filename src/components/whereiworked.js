@@ -18,6 +18,7 @@ const Worked = () =>  {
                             <TabList>
                                 <Tab tabFor="one">Singsys Pte Ltd</Tab>
                                 <Tab tabFor="two">Algoworks Technologies</Tab>
+                                <Tab tabFor="three">Thales Group</Tab>
                             </TabList>
                         <TabPanel tabId="one">
                             <div className="block-ui">
@@ -40,6 +41,18 @@ const Worked = () =>  {
                                     <li>API'S Design and collaborating with React/Vue/Angular</li>
                                     <li>Plan and Estimate the Front-end development part of the Project to Management for billing. </li>
                                     <li>Follow best practices and standards for accessibility and cross-browser compatibility.</li>
+                                    <li>Optimize our application for maximum speed and scalability. </li>
+                                </ul>
+                            </div>
+                        </TabPanel>
+                        <TabPanel tabId="three">
+                            <div className="block-ui">
+                                <h2>Software Enginner&nbsp;@&nbsp;<span>Thales Group</span></h2> 
+                                <h3>Octover 2019 - April 2020</h3>
+                                <ul>
+                                    <li>Worked on core product of team which is Card designer</li>
+                                    <li>Used Canvas, D3.js for some animation stuff</li>
+                                    <li>Developed Demo center tool for our team</li>
                                     <li>Optimize our application for maximum speed and scalability. </li>
                                 </ul>
                             </div>
