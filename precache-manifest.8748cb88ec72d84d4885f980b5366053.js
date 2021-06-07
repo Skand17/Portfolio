@@ -20,16 +20,16 @@ self.__precacheManifest = [
     "url": "/static/js/2.ffbe1884.chunk.js"
   },
   {
-    "revision": "5bdf73d34d7a0c0f48a29ec7cfcd51fd",
-    "url": "/static/media/obuhi.5bdf73d3.png"
-  },
-  {
     "revision": "55e9c63c701585636f050b1c05d7fd94",
     "url": "/static/media/oaks.55e9c63c.png"
   },
   {
     "revision": "feaffd5cc8c3a1984553379c45c8e036",
     "url": "/static/media/janeous.feaffd5c.png"
+  },
+  {
+    "revision": "5bdf73d34d7a0c0f48a29ec7cfcd51fd",
+    "url": "/static/media/obuhi.5bdf73d3.png"
   },
   {
     "revision": "2068d8f4d55b5b5ae278faea415517da",
@@ -60,6 +60,10 @@ self.__precacheManifest = [
     "url": "/static/media/react.ba0e63b2.png"
   },
   {
+    "revision": "ced611daf7709cc778da928fec876475",
+    "url": "/static/media/slick.ced611da.eot"
+  },
+  {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/static/media/slick.d41f55a7.ttf"
   },
@@ -68,20 +72,8 @@ self.__precacheManifest = [
     "url": "/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "ced611daf7709cc778da928fec876475",
-    "url": "/static/media/slick.ced611da.eot"
-  },
-  {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/static/media/slick.f97e3bbf.svg"
-  },
-  {
-    "revision": "af7ae505a9eed503f8b8e6982036873e",
-    "url": "/static/media/fontawesome-webfont.af7ae505.woff2"
-  },
-  {
-    "revision": "fee66e712a8a08eef5805a46892932ad",
-    "url": "/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
@@ -92,11 +84,19 @@ self.__precacheManifest = [
     "url": "/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
+    "revision": "af7ae505a9eed503f8b8e6982036873e",
+    "url": "/static/media/fontawesome-webfont.af7ae505.woff2"
+  },
+  {
+    "revision": "fee66e712a8a08eef5805a46892932ad",
+    "url": "/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  {
     "revision": "912ec66d7572ff821749319396470bde",
     "url": "/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "7005127e43ba1af59fac65d80e0c8f9b",
+    "revision": "09b0e7d245707245cb3464937b0bdda9",
     "url": "/index.html"
   }
 ];
