@@ -108,7 +108,7 @@ section.banner-section.clearfix {
 /* About  */
 
 .commom-section {
-    padding: 80px 0;
+    padding: 40px 0;
     position: relative;
     z-index: 99   
 }
@@ -249,14 +249,19 @@ section.about-section-wrapper h2:after {
     text-align: center;
 }
 
+.slick-slide img {
+    display: block;
+}
+
 .item-block {
     max-width: 400px;
     color: #ffffff;
 }
 
 .item-block img {
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    margin: 0 auto;
+    height: 200px;
 }
 
 .item-block h2 {
@@ -268,9 +273,23 @@ section.about-section-wrapper h2:after {
     padding: 50px;
 }
 
+.slick-dots li button:before {
+    font-size: 20px !important;
+    color: #ffffff !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ffffff !important;
+}
+
+
 .item-block p {
-    font-size: 19px;
+    font-size: 16px;
     line-height: 30px;
+}
+
+button.slick-arrow.slick-prev, button.slick-arrow.slick-next {
+    display: none !important;
 }
 
 .block-ui ul li {
@@ -348,6 +367,7 @@ button.btn.submit-btn:hover {
     display: flex;
     padding-bottom: 30px;
     justify-content: center;
+    transition: 0.3s ease;
     align-items: center;
 }
 
@@ -615,6 +635,19 @@ footer.footer-section p span {
 }
 
 
+pre.tech-stack {
+    background: #5f988b;
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.projectslist a:hover {
+    transform: scale(1.1);
+    transition: 0.4s ease;
+}
+
 .container-A{
 	position:absolute;
 	width:75%;
@@ -627,6 +660,8 @@ footer.footer-section p span {
     ul.list-wrapper {
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0;
         align-items: center;
     }
 
@@ -642,6 +677,7 @@ footer.footer-section p span {
 
     ul.list-wrapper > li {
         font-size: 0;
+        padding: 15px;
     }
 
 .container-B{
@@ -769,6 +805,7 @@ footer.footer-section p span {
     width: 60px;
     height: 34px;
     right: 34px;
+    display: none;
     z-index: 999;
     top: 30px;
 }

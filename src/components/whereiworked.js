@@ -14,7 +14,7 @@ const Worked = () =>  {
                         <h2>Where I've worked</h2>
                     </div>
                     <div className="tabing-wrapper">
-                        <Tabs defaultTab="two" className="vertical-tabs" vertical>
+                        <Tabs defaultTab="three" className="vertical-tabs" vertical>
                             <TabList>
                                 <Tab tabFor="one">Singsys Pte Ltd</Tab>
                                 <Tab tabFor="two">Algoworks Technologies</Tab>
@@ -22,7 +22,7 @@ const Worked = () =>  {
                             </TabList>
                         <TabPanel tabId="one">
                             <div className="block-ui">
-                                <h2>Front end Enginner&nbsp;@&nbsp;<span>Singsys</span></h2> 
+                                <h2>Front end Engineer&nbsp;@&nbsp;<span>Singsys</span></h2> 
                                 <h3>Aug 2017 - June 2019</h3>
                                 <ul>
                                     <li>Bringing a designer’s concept to life with Angular, React, HTML5, jQuery, JavaScript, CSS3 and SCSS. </li>
@@ -35,8 +35,8 @@ const Worked = () =>  {
                         </TabPanel>
                         <TabPanel tabId="two">
                             <div className="block-ui">
-                                <h2>Software Enginner&nbsp;@&nbsp;<span>Algoworks</span></h2> 
-                                <h3>June 2019 - Current</h3>
+                                <h2>Software Engineer&nbsp;@&nbsp;<span>Algoworks</span></h2> 
+                                <h3>June 2019 - October 2019</h3>
                                 <ul>
                                     <li>API'S Design and collaborating with React/Vue/Angular</li>
                                     <li>Plan and Estimate the Front-end development part of the Project to Management for billing. </li>
@@ -47,8 +47,8 @@ const Worked = () =>  {
                         </TabPanel>
                         <TabPanel tabId="three">
                             <div className="block-ui">
-                                <h2>Software Enginner&nbsp;@&nbsp;<span>Thales Group</span></h2> 
-                                <h3>Octover 2019 - April 2020</h3>
+                                <h2>Software Engineer&nbsp;@&nbsp;<span>Thales Group</span></h2> 
+                                <h3>October 2019 - April 2020</h3>
                                 <ul>
                                     <li>Worked on core product of team which is Card designer</li>
                                     <li>Used Canvas, D3.js for some animation stuff</li>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaReact,FaNodeJs} from 'react-icons/fa';
+import { FaReact,FaNodeJs,FaVuejs} from 'react-icons/fa';
 import {SiApollographql, SiMongodb} from 'react-icons/si'
 import bill from '../assets/bill.jpeg'
 import sundar from '../assets/sundar.jpeg'
@@ -66,6 +66,10 @@ export const technologies = [
     {
         name : 'MongoDB',
         component : <SiMongodb/>
+    },
+    {
+        name : 'Vue JS',
+        component : <FaVuejs/>
     }
 ]
 

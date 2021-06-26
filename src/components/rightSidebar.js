@@ -44,6 +44,12 @@ function RightSidebar() {
               title="Mail: Skand Mishra"
             ></i>
           </a>
+          <a href="https://drive.google.com/file/d/1tFWolFtkbjU5nDKtbOSBLtlkt7ZetPkO/view?usp=sharing" name="Resume" target="_blank" title="Resume" rel="noopener noreferrer">
+            <i
+              class="fa fa-file-pdf-o"
+              name="Resume"
+            ></i>
+          </a>
         </nav>
       </div>
     </React.Fragment>

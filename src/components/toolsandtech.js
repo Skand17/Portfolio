@@ -18,7 +18,9 @@ function Projects() {
                                                     <div className="project-desc">
                                                         <h2>{item.title}</h2>
                                                         <p>{item.desc}</p>
-                                                        <span>{item.techstack}</span>
+                                                        <span>
+                                                            <pre className="tech-stack">{item.techstack}</pre>
+                                                        </span>
                                                     </div>
                                                 </a>
                                 })
